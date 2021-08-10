@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list version="1.0">
+	<fvm_meta theme_code="" is_biz="0" />
+	<theme id="retro" name="Cartoon Classics" thumb="ann-stand.swf" cc_theme_id="retro" />
+	<theme id="action" name="Lil' Peepz" thumb="" cc_theme_id="action" />
+	<theme id="custom" name="Comedy World" thumb="" cc_theme_id="custom" />
+	<theme id="animal" name="Lil' Petz" thumb="" cc_theme_id="animal" />
+	<theme id="fullenergy" name="Full Energy" thumb="" cc_theme_id="fullenergy"/>
+	<word>mikiko,vikiko</word>
+	<whiteword />
+	<excludeAssetIDs />
+	<points money="0" sharing="0" />
+</list>

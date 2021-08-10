@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel="icon" href="../../favicon.ico" type="image/png">
+
+	<title>Vyond 2018 - Video List For Joseph Animate Awesome Domain</title>
+	<meta name="description" content="Website in 2018 Edition as GA4S is Shutting down on june 2019">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="Vyond 2018" />
+	<meta property="og:description" content="Vyond 2018 - make a your animations!" />
+	<meta property="og:url" content="https://josephcrosmanplays532.github.io/" />
+	<meta property="og:image:secure_url" content="/favicon.ico" /> 
+	<meta property="og:image:" content="/favicon.ico" /> 
+	<meta name="theme-color" content="#FF0080">
+	<link rel="stylesheet" type="text/css" href="https://josephcrosmanplays532.github.io/pages/css/modern-normalize.css">
+	<link rel="stylesheet" type="text/css" href="https://josephcrosmanplays532.github.io/pages/css/global.css">
+	<link rel="stylesheet" type="text/css" href="https://josephcrosmanplays532.github.io/pages/css/list.css">
+</head>
+<body>
+
+<header>
+	<h1 style="margin:0"><img id="logo" src="https://josephcrosmanplays532.github.io/static/477/go/img/business_video/home/list_logo.png" alt="Joseph Animate Awesome Domain"/></h1>
+	<nav id="headbuttons">
+		
+		<div class="dropdown_contain button_small">
+			<div class="dropdown_button">CREATE A CHARACTER</div>
+			<nav class="dropdown_menu">
+				<h2>Pick a Character Creator Browser</h2>
+				<a target="_blank" href="https://josephcrosmanplays532.github.io/charactercreator/family">Comedy World</a>
+				<a target="_blank" href="https://josephcrosmanplays532.github.io/charactercreator/anime">Anime</a>
+				<a target="_blank" href="https://josephcrosmanplays532.github.io/charactercreator/ninjaanime">Ninja Anime</a>
+				<a target="_blank" href="https://josephcrosmanplays532.github.io/charactercreator/cc2">Lil Peepz</a>
+				<a target="_blank" href="https://josephcrosmanplays532.github.io/charactercreator/chibi">Chibi Peepz</a>
+				<a target="_blank" href="https://josephcrosmanplays532.github.io/charactercreator/ninja">Chibi Ninjas</a>
+				<div class="dropdown_contain button_small">
+					<div class="dropdown_button">Character Creator</div>
+					<nav class="dropdown_menu">
+						<h2>Comedy World</h2>
+						<a target="_blank" href="https://josephcrosmanplays532.github.io/charactercreator/family/adam">Guy (Adam)</a>
+						<a target="_blank" href="https://josephcrosmanplays532.github.io/charactercreator/family/eve">Girl (Eve)</a>
+						<a target="_blank" href="https://josephcrosmanplays532.github.io/charactercreator/family/bob">Fat (Bob)</a>
+						<a target="_blank" href="https://josephcrosmanplays532.github.io/charactercreator/family/rocky">Buff (Rocky)</a>
+						<hr>
+						<h2>Anime</h2>
+						<a target="_blank" href="https://josephcrosmanplays532.github.io/charactercreator/ninjaanime/guy">Guy</a>
+						<a target="_blank" href="https://josephcrosmanplays532.github.io/charactercreator/ninjaanime/girl">Girl</a>
+						<a target="_blank" href="https://josephcrosmanplays532.github.io/charactercreator/ninjaanime/guy">Guy (Ninja)</a>
+						<a target="_blank" href="https://josephcrosmanplays532.github.io/charactercreator/ninjaanime/girl">Girl (Ninja)</a>
+						<hr>
+						<h2>Peepz</h2>
+						<a target="_blank" href="https://josephcrosmanplays532.github.io/charactercreator/cc2/default">Lil Peepz</a>
+						<a target="_blank" href="https://josephcrosmanplays532.github.io/charactercreator/chibi/default">Chibi Peepz</a>
+						<a target="_blank" href="https://josephcrosmanplays532.github.io/charactercreator/ninja/default">Chibi Ninjas</a>
+					</nav>
+			</nav>
+		</div>
+		<a target="_blank" href="https://josephcrosmanplays532.github.io/videomaker/full//old" class="button_big">MAKE A WIDE</a>											
+		<a target="_blank" href="https://josephcrosmanplays532.github.io/videomaker" class="button_big">MAKE A VIDEO</a>
+	</nav>  
+</header>
+
+<main>
+	<h1>Your Videos</h1>
+	<table>
+		<thead>
+			<tr>
+				<td></td>
+				<td>Video Title</td>
+				<td>Last Modified</td>
+				<td></td>
+			</tr>
+		</thead>
+		<tbody></tbody>
+		<tfoot>
+			<tr>
+				<td colspan="127"><a id="load_more" href="javascript:;">LOAD MORE...</a></td>
+			</tr>
+		</tfoot>
+	</table>
+</main>
+
+<footer>
+	<nav id="foot-left">
+		<a target="_blank" href="https://discord.gg/goanimate">GoAnimate City Discord</a>
+	</nav>
+
+	<nav id="foot-right">
+		<a target="_blank" href="https://josephcrosmanplays532.github.io">Main Page</a>
+		<a target="_blank" href="https://josephcrosmanplays532.github.io/caillou">Caillou</a>
+	</nav>
+</footer>
+
+
+
+</form>
+
+</body>
+
+<script>
+	const closeReq = new XMLHttpRequest();
+	closeReq.open('GET', '/events/close');
+	closeReq.send();
+
+	var json;
+	var tbody = document.getElementsByTagName('tbody')[0];
+	var loadMore = document.getElementById('load_more');
+	const listReq = new XMLHttpRequest();
+	listReq.open('GET', '/ajax/getMovie');
+	listReq.send();
+
+	var C = 0;
+	function loadRows() {
+		let c = C; C += 69;
+		for (; c < C; c++) {
+			if (c > json.length - 1) {
+				loadMore.remove();
+				break;
+			}
+
+			const tbl = json[c];
+			const date = tbl.date.substr(0, 10) + ' ' + tbl.date.substr(11);
+			tbody.insertAdjacentHTML('beforeend',
+				'<tr><td><img src="/movie_thumbs/' + tbl.id + '.png"></td><td><div>' + tbl.title + '</div><div>' + tbl.durationString + '</div></div></td><td><span>' + date.match(/./g).join('</span><span>') + '</span></td><td><a href="javascript:;" onclick="popup(\'' + tbl.id + '\')"></a><a href="/go_full?movieId=' + tbl.id + '"></a><a href="/movies/' + tbl.id + '.xml" download="' + tbl.title + '"></a></td></tr>');
+		}
+	}
+
+	loadMore.onclick = loadRows;
+	listReq.onreadystatechange = function (e) {
+		if (listReq.readyState != 4) return;
+		json = JSON.parse(listReq.responseText);
+		loadRows();
+	}
+
+	function popup(id) {
+		window.open('/go/previewVideo/?movieId=' + id, 'MsgWindow', 'width=640,height=360,left=' + (screen.width / 2 - 640) + ',top=' + (screen.height / 2 - 360));
+	}
+</script>
+
+</html>
